@@ -1,0 +1,241 @@
+@import 'lib/normalize';
+@import 'lib/grid.less';
+
+@import 'src/fonts';
+
+* { 
+    -webkit-box-sizing: border-box; 
+    -moz-box-sizing: border-box; 
+    box-sizing: border-box;
+}
+
+html {
+    margin: 0 !important;
+    padding: 0 !important;
+
+    height: 100%;
+}
+
+body {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+
+    background-color: #b8fcff;
+}
+
+a {
+    text-decoration: none;
+}
+
+a, a:focus, a:active, object, embed {
+    outline: 0;
+}
+
+h1, h2, h3, h4, h5 {
+    margin: 0;
+    font-weight: normal;
+}
+
+/* Header */
+header {
+    background-color: #044f70;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    z-index: 99;
+
+    height: 30px;
+    width: 100%;
+
+    .row {
+
+        h1 {
+            font-family: @lato;
+            font-weight: 400;
+            font-size: 8px;
+            line-height: 30px;
+            color: #b8fcff;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+
+            margin: 0;
+            padding: 0;
+
+            float: left;
+
+            strong {
+                font-weight: 900;
+            }
+        }
+
+        .copyright {
+            background: url(../images/mvp.png) no-repeat center right;
+
+            font-family: @lato;
+            font-weight: 400;
+            font-size: 8px;
+            line-height: 30px;
+            color: #5fdced;
+            letter-spacing: 1px;
+
+            display: block;
+
+            float: right;
+
+            padding: 0 30px 0 0;
+        }
+    }
+}
+
+/* Navigation */
+.navigation {
+    background-color: #002833;
+
+    position: fixed;
+    top: 30px;
+    left: 0;
+
+    z-index: 99;
+
+    height: 80px;
+    width: 100%;
+
+    .row {
+
+        form {
+
+            label {
+                font-family: @lato;
+                font-weight: 300;
+                font-size: 12px;
+                line-height: 80px;
+                color: #5fdced;
+                text-transform: uppercase;
+                letter-spacing: 1px;
+
+                padding: 0;
+
+                input[type="text"] {
+                    background: transparent;
+
+                    width: 25%;
+                    height: 42px;
+
+                    font-family: @lato;
+                    font-weight: 400;
+                    font-size: 12px;
+                    line-height: 32px;
+                    color: #b8fcff;
+                    letter-spacing: 1px;
+
+                    -webkit-appearance: none;
+
+                    border: none;
+                    outline: none;
+
+                    border-bottom: 1px dotted #b8fcff;
+
+                    margin: 0 0 0 10px;
+                    padding: 5px 0;
+                }
+            }
+        }
+    }
+}
+
+/* Grid */
+.grid {
+    height: 100%;
+
+    .row {
+        background-color: #0a5670;
+
+        height: 100%;
+
+        .columns {
+            height: 100%;
+
+            div {
+                background-color: #5fdced;
+
+                height: 100%;
+            }
+        }
+    }
+}
+
+
+/* Styles for screens that are atleast 30em; */
+@media only screen and (min-width: 30em) {
+    /* Header */
+    header {
+        .row {
+            h1 {
+                font-size: 10px;
+            }
+
+            .copyright {
+                font-size: 10px;
+            }
+        }
+    }
+
+    /* Navigation */
+    .navigation {
+        .row {
+            form {
+                label {
+                    font-size: 16px;
+
+                    input[type="text"] {
+                        font-size: 16px;
+
+                        margin: 0;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+/* Styles for screens that are atleast 48em; */
+@media only screen and (min-width: 48em) {
+    /* Navigation */
+    .navigation {
+        .row {
+            form {
+                label {
+                    font-size: 24px;
+
+                    input[type="text"] {
+                        width: 35%;
+                        font-size: 24px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+// High Resolution image for high dpi screens
+@media all and (-webkit-min-device-pixel-ratio: 2), 
+        all and (-moz-min-device-pixel-ratio: 1.5), 
+        all and (min-device-pixel-ratio: 2), 
+        all and (-o-min-device-pixel-ratio: 2/1) 
+{
+    /* Header */
+    header {
+        .row {
+            .copyright {
+                background-image: url(../images/mvp@2x.png);
+                background-size: 21px 19px;
+            }
+        }
+    }
+}
