@@ -101,21 +101,23 @@ header {
 
     z-index: 99;
 
-    height: 80px;
     width: 100%;
 
     .row {
 
         form {
+            margin: 0 0 10px 0;
 
             label {
                 font-family: @lato;
                 font-weight: 300;
                 font-size: 12px;
-                line-height: 80px;
+                line-height: 50px;
                 color: #5fdced;
                 text-transform: uppercase;
                 letter-spacing: 1px;
+
+                height: 50px;
 
                 padding: 0;
 
@@ -123,21 +125,22 @@ header {
                     background: transparent;
 
                     width: 25%;
-                    height: 42px;
+                    height: 22px;
 
                     font-family: @lato;
                     font-weight: 400;
                     font-size: 12px;
-                    line-height: 32px;
+                    line-height: 22px;
                     color: #b8fcff;
                     letter-spacing: 1px;
+                    text-align: center;
 
                     -webkit-appearance: none;
 
                     border: none;
                     outline: none;
 
-                    border-bottom: 1px dotted #b8fcff;
+                    border-bottom: 2px solid #135260;
 
                     margin: 0 0 0 10px;
                     padding: 5px 0;
@@ -188,11 +191,19 @@ header {
     .navigation {
         .row {
             form {
+                margin: 0;
+
                 label {
                     font-size: 16px;
+                    line-height: 60px;
+
+                    height: 60px;
 
                     input[type="text"] {
                         font-size: 16px;
+                        line-height: 32px;
+
+                        height: 32px;
 
                         margin: 0;
                     }
@@ -211,10 +222,17 @@ header {
             form {
                 label {
                     font-size: 24px;
+                    line-height: 80px;
+
+                    height: 80px;
 
                     input[type="text"] {
                         width: 35%;
+
                         font-size: 24px;
+                        line-height: 42px;
+
+                        height: 42px;
                     }
                 }
             }
