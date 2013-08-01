@@ -6,7 +6,6 @@ app.bringToFront();
 
 /*  Guides from GRIDCALCULATOR.dk */
 var gridGuides = /* GRID_GUIDES */;
-var newDocGutter = 0;
 
 /* max and min of gridGuides array */   
 var gridMin = Math.min.apply(null, gridGuides);
@@ -53,13 +52,8 @@ function main() {
 /* creates a new psd */
 function createNewDoc() {
     app.preferences.rulerUnits = Units.PIXELS;
-    var newDocumentRef = app.documents.add(gridMax-gridMin+newDocGutter*2, 768, 72.0000, gridMax + " 12 column grid");
+    var newDocumentRef = app.documents.add(gridMax-gridMin, 768, 72.0000, gridMax + " 12 column grid");
     newDocumentRef = null;
-    
-    for(i=0; i < gridGuides.length; i++) {
-        gridGuides[i] += newDocGutter;
-    }
-    
 }
 
 /* creates all the guides on the gird */
