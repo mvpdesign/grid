@@ -3,7 +3,7 @@ void function () {
 
     function initialize() {
         var     $grid   = $('#grid')
-            ,   pattern = /^([0-9]+)(\px|\pt|\%|\em)/i
+            ,   pattern = /^([0-9]*\.?[0-9]+)(\px|\pt|\%|\em)/i
             ,   regex   = new RegExp(pattern);
 
         // make the inputs spin!
@@ -39,7 +39,7 @@ void function () {
                         value   = Number( result[1] );
                         ext     = result[2];
 
-                        if(value > 0) {
+                        if(value >= 1) {
                             // decrease the value
                             value--;
 
@@ -51,18 +51,7 @@ void function () {
         });
 
         // Max width
-        $('input[name="max_width"]').keyup(function() {
-            var     $this   = $(this)
-                ,   value   = $this.val();
-
-            // is the value valid?
-            if ( regex.test(value) ) {
-                $grid.find('.row').css('max-width', value);
-            }
-        });
-
-        // Gutter
-        $('input[name="gutter"]').keyup(function() {
+        $('input[name="max_width"]').keydown(function() {
             var     $this   = $(this)
                 ,   value   = $this.val()
                 ,   result
@@ -70,23 +59,45 @@ void function () {
 
             // is the value valid?
             if ( result = value.match(pattern) ) {
-                value   = (parseInt(result[1]) / 2);
+                value   = Number( result[1] );
                 ext     = result[2];
 
-                $grid.find('.columns').css({ 'padding-left': value + ext, 'padding-right': value + ext });
+                if ( value >= 0 )
+                    $grid.find('.row').css('max-width', value + ext);
             }
         });
 
-        // Margin
-        $('input[name="margin"]').keyup(function() {
+        // Gutter
+        $('input[name="gutter"]').keydown(function() {
             var     $this   = $(this)
                 ,   value   = $this.val()
                 ,   result
                 ,   ext;
 
             // is the value valid?
-            if ( regex.test(value) ) {
-                $grid.find('.row').css({ 'padding-left': value, 'padding-right': value });
+            if ( result = value.match(pattern) ) {
+                value   = (Number( result[1] ) / 2);
+                ext     = result[2];
+
+                if ( value >= 0 )
+                    $grid.find('.columns').css({ 'padding-left': value + ext, 'padding-right': value + ext });
+            }
+        });
+
+        // Margin
+        $('input[name="margin"]').keydown(function() {
+            var     $this   = $(this)
+                ,   value   = $this.val()
+                ,   result
+                ,   ext;
+
+            // is the value valid?
+            if ( result = value.match(pattern) ) {
+                value   = Number( result[1] );
+                ext     = result[2];
+
+                if ( value >= 0 )
+                    $grid.find('.row').css({ 'padding-left': value + ext, 'padding-right': value + ext });
             }
         });
     }
