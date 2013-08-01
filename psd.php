@@ -47,4 +47,4 @@
     file_put_contents($file, $data);
 
     // return the filename
-    echo json_encode($file);
+    echo $file;

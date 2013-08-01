@@ -10,4 +10,4 @@
     file_put_contents($file, base64_decode($uri));
 
     // return the filename
-    echo json_encode($file);
+    echo $file;

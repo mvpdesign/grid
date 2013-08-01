@@ -1,5 +1,5 @@
 <?php
-    $file = trim(json_decode($_GET['path']));
+    $file = trim($_GET['path']);
 
     // force user to download the image
     if (file_exists($file)) {
