@@ -67,8 +67,10 @@
             </section>
         </aside>
 
-
-        <a href="#" class="download-png">Download PNG</a>
+        <div class="buttons">
+            <a href="#" class="download-photoshop button">Download for Photoshop</a>
+            <a href="#" class="download-png button">Download PNG</a>
+        </div>
 
         <div id="hidden-grid"></div>
 
