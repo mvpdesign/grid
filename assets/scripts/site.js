@@ -3,9 +3,54 @@ void function () {
 
     function initialize() {
         var     $grid   = $('#grid')
-            ,   pattern = /^([0-9]+)(\px|\%|\em)/i
+            ,   pattern = /^([0-9]+)(\px|\pt|\%|\em)/i
             ,   regex   = new RegExp(pattern);
 
+        // make the inputs spin!
+        $('input').focus(function() {
+            var     $this   = $(this);
+
+            $this.keydown(function(event) {
+                var     $this   = $(this)
+                    ,   value   = $this.val()
+                    ,   result
+                    ,   value
+                    ,   ext;
+
+                // up arrow key pressed
+                if (event.keyCode == 38) {
+
+                    // is the value valid?
+                    if ( result = value.match(pattern) ) {
+                        value   = Number( result[1] );
+                        ext     = result[2];
+
+                        // increase the value
+                        value++;
+
+                        $this.val(value + ext);
+                    }
+
+                // down arrow key pressed
+                } else if (event.keyCode == 40) {
+
+                    // is the value valid?
+                    if ( result = value.match(pattern) ) {
+                        value   = Number( result[1] );
+                        ext     = result[2];
+
+                        if(value > 0) {
+                            // decrease the value
+                            value--;
+
+                            $this.val(value + ext);
+                        }
+                    }
+                }
+            });
+        });
+
+        // Max width
         $('input[name="max_width"]').keyup(function() {
             var     $this   = $(this)
                 ,   value   = $this.val();
@@ -16,6 +61,7 @@ void function () {
             }
         });
 
+        // Gutter
         $('input[name="gutter"]').keyup(function() {
             var     $this   = $(this)
                 ,   value   = $this.val()
@@ -31,6 +77,7 @@ void function () {
             }
         });
 
+        // Margin
         $('input[name="margin"]').keyup(function() {
             var     $this   = $(this)
                 ,   value   = $this.val()
