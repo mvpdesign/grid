@@ -2,11 +2,12 @@ void function () {
 "use strict";
 
     function initialize() {
-        var     $window     = $(window)
-            ,   $grid       = $('#grid')
-            ,   $viewport   = $('#viewport').find('span')
-            ,   pattern     = /^([0-9]*\.?[0-9]+)(\px|\pt|\%|\em)/i
-            ,   regex       = new RegExp(pattern);
+        var     $window         = $(window)
+            ,   $grid           = $('#grid')
+            ,   $hidden_grid    = $('#hidden-grid')
+            ,   $viewport       = $('#viewport').find('span')
+            ,   pattern         = /^([0-9]*\.?[0-9]+)(\px|\pt|\%|\em)/i
+            ,   regex           = new RegExp(pattern);
 
         // Update viewport
         update_viewport();
@@ -19,7 +20,7 @@ void function () {
         }
 
         // Max width
-        $('input[name="max_width"]').keydown(function(event) {
+        $('input[name="max_width"]').keyup(function(event) {
             var     $this   = $(this)
                 ,   value   = $this.val()
                 ,   result
@@ -69,7 +70,7 @@ void function () {
         });
 
         // Gutter
-        $('input[name="gutter"]').keydown(function() {
+        $('input[name="gutter"]').keyup(function() {
             var     $this   = $(this)
                 ,   value   = $this.val()
                 ,   result
@@ -119,7 +120,7 @@ void function () {
         });
 
         // Margin
-        $('input[name="margin"]').keydown(function() {
+        $('input[name="margin"]').keyup(function() {
             var     $this   = $(this)
                 ,   value   = $this.val()
                 ,   result
@@ -166,6 +167,29 @@ void function () {
                 if ( value >= 0 )
                     $grid.find('.container').css({ 'padding-left': value + ext, 'padding-right': value + ext });
             }
+        });
+
+
+        // Download png
+        $('.download-png').on('click', function(event) {
+            event.preventDefault();
+
+            html2canvas($grid, {
+                onrendered: function(canvas) {
+                    $hidden_grid.html(canvas);
+
+                    $.ajax({
+                        url: 'image.php',
+                        type: 'POST',
+                        data: {
+                            data: canvas.toDataURL('image/png')
+                        },
+                        success: function(file) {
+                            window.location.href = "download.php?path=" + file;
+                        }
+                    });
+                }
+            });
         });
     }
 

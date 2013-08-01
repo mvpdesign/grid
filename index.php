@@ -67,8 +67,14 @@
             </section>
         </aside>
 
+
+        <a href="#" class="download-png">Download PNG</a>
+
+        <div id="hidden-grid"></div>
+
         <script src="<?= Assets::path('scripts/lib/jquery.min.js'); ?>"></script>
         <script src="<?= Assets::path('scripts/lib/respond.min.js'); ?>"></script>
+        <script src="<?= Assets::path('scripts/lib/html2canvas.js'); ?>"></script>
         <script src="<?= Assets::path('scripts/site.js'); ?>"></script>
     </body>
 </html>
