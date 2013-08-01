@@ -68,7 +68,7 @@
         </aside>
 
         <div class="buttons">
-            <a href="#" class="download-photoshop button">Download for Photoshop</a>
+            <a href="#" class="download-photoshop button">Download PS Script</a>
             <a href="#" class="download-png button">Download PNG</a>
         </div>
 
