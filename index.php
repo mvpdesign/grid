@@ -35,7 +35,7 @@
                 <form class="columns small-12">
                     <label class="columns small-12 medium-4"><center>Max Width <input type="text" name="max_width" value="60em" /></center></label>
                     <label class="columns small-12 medium-4"><center>Margin <input type="text" name="margin" value="0em" /></center></label>
-                    <label class="columns small-12 medium-4"><center>Gutter <input type="text" name="gutter" value="0.5em" /></center></label>
+                    <label class="columns small-12 medium-4"><center>Gutter <input type="text" name="gutter" value="1em" /></center></label>
                 </form>
             </section>
         </aside>
