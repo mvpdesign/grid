@@ -150,6 +150,34 @@ header {
     }
 }
 
+/* Viewport */
+.viewport {
+    background: url(../images/viewport.png) repeat-x;
+
+    position: fixed;
+    top: 190px;
+    left: 0;
+
+    width: 100%;
+    height: 40px;
+
+    z-index: 99;
+
+    .row {
+
+        .columns {
+            font-family: @lato;
+            font-weight: 400;
+            font-size: 18px;
+            line-height: 40px;
+            color: #0a5670;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            text-align: center;
+        }
+    }
+}
+
 /* Grid */
 .grid {
     height: 100%;
@@ -219,6 +247,11 @@ header {
             }
         }
     }
+
+    /* Viewport */
+    .viewport {
+        top: 90px;
+    }
 }
 
 
@@ -245,6 +278,11 @@ header {
                 }
             }
         }
+    }
+
+    /* Viewport */
+    .viewport {
+        top: 110px;
     }
 }
 

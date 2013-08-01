@@ -1794,6 +1794,26 @@ header .row .copyright {
   margin: 0 0 0 10px;
   padding: 5px 0;
 }
+/* Viewport */
+.viewport {
+  background: url(../images/viewport.png) repeat-x;
+  position: fixed;
+  top: 190px;
+  left: 0;
+  width: 100%;
+  height: 40px;
+  z-index: 99;
+}
+.viewport .row .columns {
+  font-family: 'Lato', sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 40px;
+  color: #0a5670;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  text-align: center;
+}
 /* Grid */
 .grid {
   height: 100%;
@@ -1839,6 +1859,10 @@ header .row .copyright {
     height: 32px;
     margin: 0;
   }
+  /* Viewport */
+  .viewport {
+    top: 90px;
+  }
 }
 /* Styles for screens that are atleast 48em; */
 @media only screen and (min-width: 48em) {
@@ -1853,6 +1877,10 @@ header .row .copyright {
     font-size: 24px;
     line-height: 42px;
     height: 42px;
+  }
+  /* Viewport */
+  .viewport {
+    top: 110px;
   }
 }
 @media all and (-webkit-min-device-pixel-ratio: 2), all and (-moz-min-device-pixel-ratio: 1.5), all and (min-device-pixel-ratio: 2), all and (-o-min-device-pixel-ratio: 2/1) {

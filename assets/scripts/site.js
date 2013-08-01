@@ -2,9 +2,21 @@ void function () {
 "use strict";
 
     function initialize() {
-        var     $grid   = $('#grid')
-            ,   pattern = /^([0-9]*\.?[0-9]+)(\px|\pt|\%|\em)/i
-            ,   regex   = new RegExp(pattern);
+        var     $window     = $(window)
+            ,   $grid       = $('#grid')
+            ,   $viewport   = $('#viewport').find('span')
+            ,   pattern     = /^([0-9]*\.?[0-9]+)(\px|\pt|\%|\em)/i
+            ,   regex       = new RegExp(pattern);
+
+        // Update viewport
+        update_viewport();
+        $window.on('resize', function() {
+            update_viewport();
+        });
+
+        function update_viewport() {
+            $viewport.text($window.width());
+        }
 
         // Max width
         $('input[name="max_width"]').keydown(function(event) {

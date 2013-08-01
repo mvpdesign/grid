@@ -40,6 +40,14 @@
             </section>
         </aside>
 
+        <aside id="viewport" class="viewport">
+            <section class="row clearfix">
+                <div class="columns small-12">
+                    Viewport: <span>0</span>
+                </div>
+            </section>
+        </aside>
+
         <aside id="grid" class="grid">
             <section class="row">
                 <div class="columns small-12 container">
