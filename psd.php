@@ -15,22 +15,24 @@
     $position += $margin;
     $guides[] = $position;
 
-    foreach($columns as $index => $column) {
+    if($columns) {
+        foreach($columns as $index => $column) {
 
-        // column gutter
-        if($current == 1)
+            // column gutter
+            if($current == 1)
+                $guides[] = $position;
+            $position += $gutters[$index];
             $guides[] = $position;
-        $position += $gutters[$index];
-        $guides[] = $position;
 
-        // column
-        $position += $column;
+            // column
+            $position += $column;
 
-        // column gutter
-        $guides[] = $position;
-        $position += $gutters[$index];
+            // column gutter
+            $guides[] = $position;
+            $position += $gutters[$index];
 
-        $current++;
+            $current++;
+        }
     }
 
     // right margin
