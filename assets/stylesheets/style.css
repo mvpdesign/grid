@@ -1820,6 +1820,7 @@ header .row .copyright {
 /* Grid */
 .grid {
   height: 100%;
+  overflow: hidden;
 }
 .grid .row {
   height: 100%;
