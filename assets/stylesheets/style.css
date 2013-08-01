@@ -1827,6 +1827,7 @@ header .row .copyright {
 }
 .grid .row .columns {
   height: 100%;
+  float: left !important;
 }
 .grid .row .columns.container {
   background-color: #0a5670;
