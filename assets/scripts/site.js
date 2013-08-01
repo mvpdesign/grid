@@ -195,13 +195,23 @@ void function () {
         $('.download-photoshop').on('click', function(event) {
             event.preventDefault();
 
+            var columns = new Array();
+            var gutters = new Array();
+
+            $('.column').each(function() {
+                var     $this   = $(this)
+                    ,   $div    = $this.find('div');
+
+                columns.push( $div.innerWidth() );
+                gutters.push( (($this.innerWidth() - $div.innerWidth()) / 2) );
+            });
+
             $.ajax({
                 url: 'psd.php',
                 type: 'POST',
                 data: {
-                    width: $('.container').innerWidth(),
-                    column: $('.column div').innerWidth(),
-                    gutter: (($('.column').innerWidth() - $('.column div').innerWidth()) / 2),
+                    columns: columns,
+                    gutters: gutters,
                     margin: (($('.container').innerWidth() - $('.container').width()) / 2)
                 },
                 success: function(file) {

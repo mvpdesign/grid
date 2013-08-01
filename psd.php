@@ -1,44 +1,37 @@
 <?php
 
-    $width      = $_POST['width'];
-    $column     = $_POST['column'];
-    $gutter     = $_POST['gutter'];
+    $columns    = $_POST['columns'];
+    $gutters    = $_POST['gutters'];
     $margin     = $_POST['margin'];
 
     $folder     = 'grid/';
     $file       = $folder . md5(uniqid()) . '.jsx';
     $position   = 0;
     $guides     = array();
+    $current    = 1;
 
     // left margin
     $guides[] = $position;
     $position += $margin;
     $guides[] = $position;
 
-    // left gutter
-    $guides[] = $position;
-    $position += $gutter;
-    $guides[] = $position;
+    foreach($columns as $index => $column) {
 
-    // add the guides
-    for ($i = 1; $i <= 11; $i++) {
+        // column gutter
+        if($current == 1)
+            $guides[] = $position;
+        $position += $gutters[$index];
+        $guides[] = $position;
 
         // column
         $position += $column;
 
         // column gutter
         $guides[] = $position;
-        $position += ($gutter * 2);
-        $guides[] = $position;
+        $position += $gutters[$index];
+
+        $current++;
     }
-
-    // last column
-    $position += $column;
-
-    // right gutter
-    $guides[] = $position;
-    $position += $gutter;
-    $guides[] = $position;
 
     // right margin
     $guides[] = $position;
