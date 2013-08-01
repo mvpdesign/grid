@@ -68,8 +68,10 @@
         </aside>
 
         <div class="buttons">
-            <a href="#" class="download-photoshop button">Download PS Script</a>
-            <a href="#" class="download-png button">Download PNG</a>
+            <div class="row">
+                <a href="#" class="download-photoshop button">Download PS Script</a>
+                <a href="#" class="download-png button">Download PNG</a>
+            </div>
         </div>
 
         <div id="hidden-grid"></div>
