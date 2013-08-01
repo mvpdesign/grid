@@ -169,7 +169,6 @@ void function () {
             }
         });
 
-
         // Download png
         $('.download-png').on('click', function(event) {
             event.preventDefault();
@@ -188,6 +187,25 @@ void function () {
                             window.location.href = "download.php?path=" + file;
                         }
                     });
+                }
+            });
+        });
+
+        // Download for photoshop
+        $('.download-photoshop').on('click', function(event) {
+            event.preventDefault();
+
+            $.ajax({
+                url: 'psd.php',
+                type: 'POST',
+                data: {
+                    width: $('.container').innerWidth(),
+                    column: $('.column div').innerWidth(),
+                    gutter: (($('.column').innerWidth() - $('.column div').innerWidth()) / 2),
+                    margin: (($('.container').innerWidth() - $('.container').width()) / 2)
+                },
+                success: function(file) {
+                    window.location.href = "download.php?path=" + file;
                 }
             });
         });
