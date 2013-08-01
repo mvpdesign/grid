@@ -102,7 +102,7 @@ void function () {
                 ext     = result[2];
 
                 if ( value >= 0 )
-                    $grid.find('.columns').css({ 'padding-left': value + ext, 'padding-right': value + ext });
+                    $grid.find('.column').css({ 'padding-left': value + ext, 'padding-right': value + ext });
             }
         });
 
@@ -152,7 +152,7 @@ void function () {
                 ext     = result[2];
 
                 if ( value >= 0 )
-                    $grid.find('.row').css({ 'padding-left': value + ext, 'padding-right': value + ext });
+                    $grid.find('.container').css({ 'padding-left': value + ext, 'padding-right': value + ext });
             }
         });
     }

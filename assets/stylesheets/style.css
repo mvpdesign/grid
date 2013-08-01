@@ -1799,13 +1799,19 @@ header .row .copyright {
   height: 100%;
 }
 .grid .row {
-  background-color: #0a5670;
   height: 100%;
 }
 .grid .row .columns {
   height: 100%;
 }
-.grid .row .columns div {
+.grid .row .columns.container {
+  background-color: #0a5670;
+  padding: 0;
+}
+.grid .row .columns.column {
+  background-color: #007a96;
+}
+.grid .row .columns.column div {
   background-color: #5fdced;
   height: 100%;
 }

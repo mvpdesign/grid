@@ -42,18 +42,20 @@
 
         <aside id="grid" class="grid">
             <section class="row">
-                <div class="columns small-1"><div></div></div>
-                <div class="columns small-1"><div></div></div>
-                <div class="columns small-1"><div></div></div>
-                <div class="columns small-1"><div></div></div>
-                <div class="columns small-1"><div></div></div>
-                <div class="columns small-1"><div></div></div>
-                <div class="columns small-1"><div></div></div>
-                <div class="columns small-1"><div></div></div>
-                <div class="columns small-1"><div></div></div>
-                <div class="columns small-1"><div></div></div>
-                <div class="columns small-1"><div></div></div>
-                <div class="columns small-1"><div></div></div>
+                <div class="columns small-12 container">
+                    <div class="columns small-1 column"><div></div></div>
+                    <div class="columns small-1 column"><div></div></div>
+                    <div class="columns small-1 column"><div></div></div>
+                    <div class="columns small-1 column"><div></div></div>
+                    <div class="columns small-1 column"><div></div></div>
+                    <div class="columns small-1 column"><div></div></div>
+                    <div class="columns small-1 column"><div></div></div>
+                    <div class="columns small-1 column"><div></div></div>
+                    <div class="columns small-1 column"><div></div></div>
+                    <div class="columns small-1 column"><div></div></div>
+                    <div class="columns small-1 column"><div></div></div>
+                    <div class="columns small-1 column"><div></div></div>
+                </div>
             </section>
         </aside>
 
