@@ -1851,7 +1851,7 @@ header .row .copyright {
 .buttons .button {
   background-color: #0dd37e;
   font-family: 'Lato', sans-serif;
-  font-weight: 200;
+  font-weight: 300;
   font-size: 12px;
   line-height: 24px;
   color: #ffffff;
@@ -1864,9 +1864,6 @@ header .row .copyright {
   height: 100%;
   float: left;
   border-right: 1px solid #1da064;
-}
-.buttons .button:hover {
-  background-color: #1da064;
 }
 .buttons .button + .button {
   border-left: 1px solid #1da064;
@@ -1949,4 +1946,12 @@ header .row .copyright {
     background-image: url(../images/mvp@2x.png);
     background-size: 21px 19px;
   }
+}
+/* No Touch */
+.no-touch {
+  /* Buttons */
+
+}
+.no-touch .buttons .button:hover {
+  background-color: #1da064;
 }

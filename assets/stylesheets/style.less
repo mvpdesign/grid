@@ -229,7 +229,7 @@ header {
         background-color: #0dd37e;
 
         font-family: @lato;
-        font-weight: 200;
+        font-weight: 300;
         font-size: 12px;
         line-height: 24px;
         color: #ffffff;
@@ -247,10 +247,6 @@ header {
         float: left;
 
         border-right: 1px solid #1da064;
-
-        &:hover {
-            background-color: #1da064;
-        }
     }
 
     .button + .button {
@@ -381,6 +377,20 @@ header {
             .copyright {
                 background-image: url(../images/mvp@2x.png);
                 background-size: 21px 19px;
+            }
+        }
+    }
+}
+
+
+/* No Touch */
+.no-touch {
+
+    /* Buttons */
+    .buttons {
+        .button {
+            &:hover {
+                background-color: #1da064;
             }
         }
     }
