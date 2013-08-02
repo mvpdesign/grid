@@ -12,10 +12,16 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
         <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,user-scalable=no">
 
-        <title>Grid</title>
+        <title>Visual Grid Reference</title>
+        <meta name="description" content="A visual reference for working with a fluid, responsive grid within the Foundation framework.">
 
         <link href="favicon.ico" rel="shortcut icon" type="image/x-icon" />
         <link rel="stylesheet" href="<?= Assets::path('stylesheets/style.css'); ?>">
+
+        <meta property="og:image" content="http://www.visualgridref.com<?= Assets::path('images/facebook.jpg'); ?>" />
+        <meta property="og:title" content="Visual Grid Reference" />
+        <meta property="og:url" content="http://www.visualgridref.com/" />
+        <meta property="og:type" content="website" />
 
         <!--[if lt IE 9]>
         <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
