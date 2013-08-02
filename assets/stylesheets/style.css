@@ -1755,6 +1755,11 @@ header .row .copyright {
   display: block;
   float: right;
   padding: 0 30px 0 0;
+  width: 21px;
+  height: 30px;
+}
+header .row .copyright span {
+  display: none;
 }
 /* Navigation */
 .navigation {
@@ -1881,6 +1886,10 @@ header .row .copyright {
   }
   header .row .copyright {
     font-size: 10px;
+    width: auto;
+  }
+  header .row .copyright span {
+    display: block;
   }
   /* Navigation */
   .navigation .row form {

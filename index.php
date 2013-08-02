@@ -33,7 +33,7 @@
             <section class="row">
                 <div class="columns small-12">
                     <h1>Foundation 4 <strong>&nbsp;VISUAL GRID ADJUSTER</strong></h1>
-                    <a href="http://www.mvpdesign.com" target="_blank" class="copyright">created for your pleasure by</a>
+                    <a href="http://www.mvpdesign.com" target="_blank" class="copyright"><span>created for your pleasure by</span></a>
                 </div>
             </section>
         </header>
