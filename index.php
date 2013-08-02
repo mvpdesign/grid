@@ -13,6 +13,7 @@
 
         <title>Grid</title>
 
+        <link href="favicon.ico" rel="shortcut icon" type="image/x-icon" />
         <link rel="stylesheet" href="<?= Assets::path('stylesheets/style.css'); ?>">
 
         <!--[if lt IE 9]>
