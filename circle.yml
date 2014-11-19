@@ -1,0 +1,11 @@
+machine:
+
+  # Version of php to use
+  php:
+    version: 5.3.3
+
+deployment:
+  staging:
+    branch: master
+    commands:
+      - curl -X POST -H 'Accept:Application/json' -H 'Content-Type:Application/json' -d '{"env_id":"'$DEPLOYMENT_STAGING'","secret":"'$DEPLOYMENT_SECRET'"}' https://mvp-marketing-design.dploy.io/webhook/deploy
